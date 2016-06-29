@@ -1,0 +1,47 @@
+unit U_TxFormulas;
+
+interface
+uses
+  SysUtils,
+  U_Small_Lib;
+
+function Get_Formula(AArr_Input: array of const): Tarr_Varrec; stdcall; export;
+//function  ;
+implementation
+uses
+  U_MainFormulas;
+
+var Id_Obj:Integer;
+
+function Get_Formula(AArr_Input: array of const): Tarr_Varrec;
+var
+  Id_Obj: Integer;
+begin
+  DoInitialize_Dll(VarrecToStr(AArr_Input[0]));
+
+  Id_Obj := StrToInt(VarRecToStr(AArr_Input[1]));
+
+end;
+
+//lecture de carac
+
+function Get_Var(AArr_Input: array of const):Tarr_Varrec;
+var
+  Id_Att: Integer;
+begin
+     DoInitialize_Dll(VarrecToStr(AArr_Input[0]));
+
+     if Id_Obj <1 then
+     exit
+     else
+
+     Id_Att:=
+
+
+     // recuperer l'id de l'attribut afin d'acceder àa sa valeur
+
+
+
+end;
+
+end.

@@ -1,0 +1,34 @@
+library TxFormulas;
+
+{ Remarque importante sur la gestion mémoire de la DLL : ShareMem doit être la
+  première unité de la clause USES de votre bibliothèque ET la clause USES
+  (sélectionner Projet-Voir le source) de votre projet si votre DLL exporte toute procédure ou
+  fonction qui passe des chaînes par le biais de paramètres ou de résultats de fonctions. Cela
+  s'applique à toutes les chaînes passées vers et depuis votre DLL -- même celles qui
+  sont imbriquées dans des enregistrements et des classes. ShareMem est l'unité d'interface au
+  gestionnaire de mémoire partagée BORLNDMM.DLL, qui doit être déployé
+  avec votre DLL. Pour éviter l'emploi de BORLNDMM.DLL, passez des informations chaîne
+  par le biais de paramètres PChar ou ShortString. }
+
+uses
+  System.SysUtils,
+  System.Classes,
+  U_MainFormulas in 'Pas\U_MainFormulas.pas',
+  U_TxFormulas in 'Pas\U_TxFormulas.pas',
+  U_Log in 'D:\CodeBassetti\Others\lib\U_Log.pas',
+  U_Small_Lib in 'D:\CodeBassetti\Others\lib\U_Small_Lib.pas',
+  U_Abstract in 'D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Abstract.pas',
+  U_Abstract_TxWebComponents in 'D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Abstract_TxWebComponents.pas',
+  U_Const in 'D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Const.pas',
+  U_Version in 'D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Version.pas',
+  U_JSON in 'D:\CodeBassetti\Others\lib\U_JSON.pas',
+  U_Class in 'D:\CodeBassetti\Others\lib\U_Class.pas',
+  MSXML2_TLB in 'D:\CodeBassetti\Others\lib\MSXML2_TLB.pas',
+  U_XML_Lib in 'D:\CodeBassetti\Others\lib\U_XML_Lib.pas',
+  JvGnugettext in 'D:\CodeBassetti\Others\lib\JvGnugettext.pas',
+  U_TxFormula_Ini in 'Pas\U_TxFormula_Ini.pas';
+
+{$R *.res}
+
+begin
+end.

@@ -1,0 +1,25 @@
+unit U_TxFormulas;
+
+interface
+uses
+  U_Small_Lib;
+
+function Get_Formula(AArr_Input: array of const): Tarr_Varrec; stdcall; export;
+
+implementation
+
+uses
+  U_MainFormulas;
+
+function Get_Formula(AArr_Input: array of const): Tarr_Varrec;
+var
+  Id_Obj: Integer;
+begin
+  DoInitialize_Dll(AArr_Input[0]);
+
+  Id_Obj := StrToInt(VarRecToStr(AArr_Input[1]);
+
+end;
+
+
+end.

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/06/27 15:50:58.000.191,=D:\CodeBassetti\Others\lib\U_Log.pas</Transaction>
+    <Transaction>2016/06/27 15:51:27.000.518,=D:\CodeBassetti\Others\lib\U_Small_Lib.pas</Transaction>
+    <Transaction>2016/06/27 15:59:37.000.208,=D:\CodeBassetti\SpecificDev\TEEXMA\pas\lib\U_Abstract_TxWebComponents.pas</Transaction>
+    <Transaction>2016/06/27 15:59:37.000.185,=D:\CodeBassetti\SpecificDev\TEEXMA\pas\lib\U_abstract.pas</Transaction>
+    <Transaction>2016/06/27 16:01:12.000.723,D:\CodeBassetti\SpecificDev\TEEXMA\pas\lib\U_abstract.pas=</Transaction>
+    <Transaction>2016/06/27 16:01:15.000.674,D:\CodeBassetti\SpecificDev\TEEXMA\pas\lib\U_Abstract_TxWebComponents.pas=</Transaction>
+    <Transaction>2016/06/27 16:05:22.000.039,=D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Abstract.pas</Transaction>
+    <Transaction>2016/06/27 16:05:22.000.072,=D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Abstract_TxWebComponents.pas</Transaction>
+    <Transaction>2016/06/27 16:06:44.000.125,=D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Const.pas</Transaction>
+    <Transaction>2016/06/27 16:06:44.000.130,=D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Version.pas</Transaction>
+    <Transaction>2016/06/27 16:12:42.000.568,=D:\CodeBassetti\Others\lib\U_Class.pas</Transaction>
+    <Transaction>2016/06/27 16:12:54.000.386,D:\CodeBassetti\Others\lib\U_Class.pas=</Transaction>
+    <Transaction>2016/06/28 14:14:44.000.628,=D:\CodeBassetti\Others\lib\U_JSON.pas</Transaction>
+    <Transaction>2016/06/28 15:17:10.000.580,=D:\CodeBassetti\Others\lib\U_Class.pas</Transaction>
+    <Transaction>2016/06/28 16:47:04.000.023,=D:\CodeBassetti\Others\lib\MSXML2_TLB.pas</Transaction>
+    <Transaction>2016/06/28 16:47:32.000.142,=D:\CodeBassetti\Others\lib\U_XML_Lib.pas</Transaction>
+    <Transaction>2016/06/28 16:49:21.000.946,=D:\CodeBassetti\Others\lib\JvGnugettext.pas</Transaction>
+    <Transaction>2016/06/29 09:49:27.955,=D:\Tests\FormulasWeb\Formulas\Unit1.pas</Transaction>
+    <Transaction>2016/06/29 09:49:58.437,D:\Tests\FormulasWeb\Formulas\Pas\U_TxFormula_Ini.pas=D:\Tests\FormulasWeb\Formulas\Unit1.pas</Transaction>
+    <Transaction>2016/06/29 09:52:35.395,D:\CodeBassetti\Others\lib\JvGnugettext.pas=</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="D:"/>
+    <File Path="D:\CodeBassetti"/>
+    <File Path="D:\CodeBassetti\Others"/>
+    <File Path="D:\CodeBassetti\Others\lib"/>
+    <File Path="D:\CodeBassetti\Others\lib\U_JSON.pas"/>
+    <File Path="D:\CodeBassetti\Others\lib\U_Log.pas"/>
+    <File Path="D:\CodeBassetti\Others\lib\U_Small_Lib.pas"/>
+    <File Path="D:\CodeBassetti\Others\lib\U_Class.pas"/>
+    <File Path="D:\CodeBassetti\Others\lib\MSXML2_TLB.pas"/>
+    <File Path="D:\CodeBassetti\Others\lib\U_XML_Lib.pas"/>
+    <File Path="D:\CodeBassetti\Specific_Devs"/>
+    <File Path="D:\CodeBassetti\Specific_Devs\3.9.0"/>
+    <File Path="D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract"/>
+    <File Path="D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238"/>
+    <File Path="D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Abstract.pas"/>
+    <File Path="D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Abstract_TxWebComponents.pas"/>
+    <File Path="D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Const.pas"/>
+    <File Path="D:\CodeBassetti\Specific_Devs\3.9.0\U_Abstract\24238\U_Version.pas"/>
+    <File Path="Pas"/>
+    <File Path="Pas\U_MainFormulas.pas"/>
+    <File Path="Pas\U_TxFormulas.pas"/>
+    <File Path="Pas\U_TxFormula_Ini.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>
