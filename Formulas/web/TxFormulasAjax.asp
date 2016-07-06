@@ -20,12 +20,17 @@ new J.ajax({
         Id_Obj: Id_Obj,
         TxObj_CycleTime:TxObj_CycleTime,
         fCycleTime:fCycleTime 
-
+        sFormula : sFormula
         
     },
     success:function(data){
-    result = 
-    }
+    result = StrToArray(data);
+    if (sResult[0] == "ok"){
+	 //....
+	} else
+	    alert(sResult[0]);
+	}
+    
 });
 
 </script>
