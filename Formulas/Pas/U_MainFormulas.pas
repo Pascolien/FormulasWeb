@@ -20,13 +20,12 @@ function DoInitialize_Dll(ATxDir: string): integer;
 
 //recuperation de la valeur d'une carac
 //function Get_OT: integer;
-function Get_ID_Object: integer;
+//function Get_ID_Object: integer;
 //calcul
 
 
-//fonction édition de var variables
 
-//function ();
+
 
 
 implementation
@@ -34,7 +33,7 @@ implementation
 uses
   SysUtils, Classes,
   Math,
-  jvgnugettext,
+  //jvgnugettext,
   U_Abstract_TxWebComponents,
   U_Log,
   U_Const;
@@ -121,11 +120,11 @@ end;
 
 //récupération de l'ID object
 
-function Get_ID_Object: integer;
-
+{function Get_ID_Object: integer;
 begin
+//ID_Object := rTxObj_Formula.Get_Data_sValue(Get_ID_OT_Formula)  ;
   result := ID_Object;
 
-end;
+end;}
 
 end.

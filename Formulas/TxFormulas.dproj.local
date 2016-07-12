@@ -18,9 +18,9 @@
     <Transaction>2016/06/28 16:47:04.000.023,=D:\CodeBassetti\Others\lib\MSXML2_TLB.pas</Transaction>
     <Transaction>2016/06/28 16:47:32.000.142,=D:\CodeBassetti\Others\lib\U_XML_Lib.pas</Transaction>
     <Transaction>2016/06/28 16:49:21.000.946,=D:\CodeBassetti\Others\lib\JvGnugettext.pas</Transaction>
-    <Transaction>2016/06/29 09:49:27.955,=D:\Tests\FormulasWeb\Formulas\Unit1.pas</Transaction>
-    <Transaction>2016/06/29 09:49:58.437,D:\Tests\FormulasWeb\Formulas\Pas\U_TxFormula_Ini.pas=D:\Tests\FormulasWeb\Formulas\Unit1.pas</Transaction>
-    <Transaction>2016/06/29 09:52:35.395,D:\CodeBassetti\Others\lib\JvGnugettext.pas=</Transaction>
+    <Transaction>2016/06/29 09:49:27.000.955,=D:\Tests\FormulasWeb\Formulas\Unit1.pas</Transaction>
+    <Transaction>2016/06/29 09:49:58.000.437,D:\Tests\FormulasWeb\Formulas\Pas\U_TxFormula_Ini.pas=D:\Tests\FormulasWeb\Formulas\Unit1.pas</Transaction>
+    <Transaction>2016/06/29 09:52:35.000.395,D:\CodeBassetti\Others\lib\JvGnugettext.pas=</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="D:"/>
