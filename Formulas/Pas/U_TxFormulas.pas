@@ -27,15 +27,15 @@ type TxFormula=class
     constructor Create_From_TEEXMA(const ATxObject:TS_Object_Data);
 
     function Get_Variable(aName : String): TxVariable; virtual;stdcall;export;
-    function Get_Ol_Variable : TObjectList;
+   // function Get_Ol_Variable : TObjectList;
 
     Destructor Destroy(); override;
 end;
 
 function Create_Formula: TxFormula; stdcall;export;
 
-function Get_Formula(AArr_Input: array of const): Tarr_Varrec; stdcall; export;
-//function  ;
+function Get_Formula(AArr_Input: array of const): Tarr_Varrec; stdcall; export; overload;
+  
 var
   Obj_Formula : TxFormula;
 
@@ -52,7 +52,7 @@ begin
   result := TxFormula.Create;
 end;
 
-function Get_Formula(AArr_Input: array of const): Tarr_Varrec;
+function Get_Formula(aName : String): Tarr_Varrec;  Overload;
 var
   Id_Obj: Integer;
   TxObj_Formula: TS_Object_Data;
@@ -66,13 +66,14 @@ var
   rVar: TJSONObject;
   rATT_Set: TS_Attribute_Set;
   i:integer;
+  
 begin
   Setlength(result, 2);
   TxObj_Formula := nil;
   //TxJSONObject := nil;
   try
     DoInitialize_Dll(VarrecToStr(AArr_Input[0]));
-    Id_Obj := StrToInt(VarRecToStr(AArr_Input[1]));
+    Id_Obj := StrToInt(VarRecToStr(AArr_Input[1]));  
 
     if assigned(Obj_Formula) then
       FreeAndNil(Obj_Formula);
@@ -80,19 +81,18 @@ begin
     TxObj_Formula := Create_Object_Data_From_Attribute_Set(Get_ID_AS_Formula, Id_Obj);
     
     Obj_Formula.Create_From_TEEXMA(TxObj_Formula);
-     
+
 
     //Testing parse string to json object
     TxJSONObject := TJSONObject.Create;
     TxJSONObject := TJSONObject.ParseJSONValue(sFormula) as TJSONObject;
 
     if TxJSONObject.GetValue('variables') <> nil then
-      rArr_Variables := TxJSONObject.GetValue('variables') as TJSONArray;
+       rArr_Variables := TxJSONObject.GetValue('variables') as TJSONArray;
 
     for i := 0 to rArr_Variables.Size - 1 do
     begin
       rVar := TJSONObject(rArr_Variables.Get(i));
-      sName := rVar.GetValue('name').Value;
       
       
     end;
@@ -115,7 +115,7 @@ begin
 
 end;
 
-function TxFormula.Get_Variable(AArr_input: array of const):Tarr_Varrec;
+function TxFormula.Get_Variable(aName : String):TxVariable;
 Var
   ID_Attribut: integer;
   rAttribut:TS_Attribute;
@@ -125,6 +125,7 @@ Var
   TxObj_CycleTime:TJSONObject;
   MyVar:TObject;
   sName: string ;
+  i:integer;
 begin
   
   //MyVar := TxVariable(Obj_Formula.Get_Ol_Variable[i]);
