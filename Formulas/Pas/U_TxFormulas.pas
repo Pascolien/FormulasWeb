@@ -2,16 +2,19 @@ unit U_TxFormulas;
 
 interface
 uses
+
+  U_Const,
   SysUtils, contnrs,
   DBXJSON,
   U_Abstract,
-  U_Small_Lib;
+  U_Small_Lib,
+  U_Abstract_TxWebComponents;
 
 type TxVariable=class
   private
-    sName: String;
-    fValue: Extended;
-    sUnit: String;
+//    sName: String;
+   // fValue: Extended;
+    //sUnit: String;
   public
    
 end;
@@ -19,22 +22,27 @@ end;
 type TxFormula=class
   private
      OL_Variable: TObjectList;
+     //fValue: Extended;
      sFormula: String;
+//     sUnit: String;
 
      procedure Initialize;
   public
     Constructor Create(); overload;
     constructor Create_From_TEEXMA(const ATxObject:TS_Object_Data);
 
-    function Get_Variable(aName : String): TxVariable; virtual;stdcall;export;
-   // function Get_Ol_Variable : TObjectList;
-
     Destructor Destroy(); override;
+
+    function Get_Variable(aName : String): TxVariable; virtual;stdcall;export;
+    //function Get_Ol_Variable : TObjectList;
+
+
 end;
 
 function Create_Formula: TxFormula; stdcall;export;
+    function Get_Formula(AArr_Input: array of const): Tarr_Varrec; stdcall; export;
 
-function Get_Formula(AArr_Input: array of const): Tarr_Varrec; stdcall; export; overload;
+
   
 var
   Obj_Formula : TxFormula;
@@ -52,7 +60,7 @@ begin
   result := TxFormula.Create;
 end;
 
-function Get_Formula(aName : String): Tarr_Varrec;  Overload;
+function Get_Formula(AArr_Input: array of const): Tarr_Varrec;  Overload;
 var
   Id_Obj: Integer;
   TxObj_Formula: TS_Object_Data;
@@ -70,10 +78,10 @@ var
 begin
   Setlength(result, 2);
   TxObj_Formula := nil;
-  //TxJSONObject := nil;
+  TxJSONObject := nil;
   try
     DoInitialize_Dll(VarrecToStr(AArr_Input[0]));
-    Id_Obj := StrToInt(VarRecToStr(AArr_Input[1]));  
+    Id_Obj := StrToInt(VarRecToStr(AArr_Input[1]));
 
     if assigned(Obj_Formula) then
       FreeAndNil(Obj_Formula);
@@ -142,23 +150,26 @@ begin
         begin
           sName := rAttribut.Get_Name;
           ID_Unit := rAttribut.Get_ID_Unit;
+          (*if sName = TxObj_CycleTime.GetValue('variables.name') then  //synchro valeurs
+          begin
+            // Self.Get_Variable(fvalue):= TxObj_CycleTime.GetValue('variables.value');
+             //Self.Get_Variable(sUnit) := TxObj_CycleTime.GetValue('variables.Unit') ;
+          end;
+            *)
         end;
       end;
     end;
     
-       
-  {if Self.sName = TxJSONObject.variables.name and ((Self.fValue <> TxJSONObject.variables.value) or (Self.sUnit <> TxJSONObject.variables.unit )) then
-  begin
-    self.fValue := TxJSONObject;
-    self.sUnit := TxJSONObject.variables.Unit ;
-  end;}
+
+
+end;
 
    //sync TxObj
      {if (self.sName = TxObj_CycleTime) then
      begin 
        self.fValue := TxObj_CycleTime;
        self.sUnit := TxObj_CycleTime.variables.Unit;
-     end;}
+     end;
 end;
 
   
